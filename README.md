@@ -9,4 +9,18 @@ bool IsKPeriodic(const std::string& str, int K) {
 
     int len = str.length(); 
   ```
-  
+  ``` c++
+  // Проверяем, что длина строки кратна K
+    if (len % K != 0) {
+        return false;
+    }
+```
+``` c++
+ 
+    for (int i = 0; i < len - K; i++) {
+        if (str[i] != str[i % K]) {
+            return false;
+        }
+    }
+
+    return true; 

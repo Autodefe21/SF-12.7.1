@@ -29,8 +29,8 @@ bool IsKPeriodic(const std::string& str, int K) {
 int main()
 {
     setlocale(LC_ALL, "Russian");
-    std::string str = "abcdabcdabcdabcd";
-    int K = 4;
+    std::string str = "abcabcabcabc";
+    int K = 3;
 
     if (IsKPeriodic(str, K)) {
         std::cout << "Строка является кратной числу " << K << std::endl;
